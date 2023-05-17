@@ -6,21 +6,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabella Viksten</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/75a0647f3a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/taco_frack_genom.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <img src="images/logo_big.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+        <div class="header-text">
+            <h1>Engineering Student</h1>
+            <p>in <span>media technology</span> and <span>computer science</span></p>
+        </div>
     </div>
 </div>
+<!-----------------about---------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/background_1_small.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>I am currently pursuing a master of science in engineering within 
+                interactive media technology at KTH Royal Institute of Technology. 
+                I am passionate about user experience and web development, and I am 
+                an ambitious person who is eager to learn new things.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web development</span><br>Web app developments</li>
+                        <li><span>App development</span><br>Building iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Sales associate at Caroline Hjerpe</li>
+                        <li><span>2023</span><br>Internship within CX analysis and DCO at GroupM</li>
+                        <li><span>2020 - 2023</span><br>Technical support at SVT</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Master of Science in Interactive Media Technology at KTH</li>
+                        <li><span>2019 - 2022</span><br>Bacherlor of Science in Media Technology at KTH</li>
+                        <li><span>2018</span><br>English I at Stockholm University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------services--------------->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>When it comes to web design I know both how to code the website to make it functional as well
+                    as the design and how to make the website user friendly. I work with JavaScript, HTML, CSS and react. 
+                </p>
+               <!-- <a href="#">Learn more</a> --> 
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>I have stuied many courses in human-computer interaction and enjoy learning more about what functionalites are
+                    important for different types of users. I am familiar with different design methods and how to evaluate users' needs. 
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-simple"></i>
+                <h2>CX Analysis</h2>
+                <p>I am a certified CX analyst which means I can help clients analyze their websites to see how they can reach their
+                    goals in the best way. I have worked with Contentsquare for this. 
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------portfolio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work_soundscapes.png">
+                <div class="layer">
+                    <h3>App Design</h3>
+                    <p>As part of the course Media Technology and Interaction Design we were asked to design an app for an introverted world
+                        after the pandemic. We conducted user evaluations and interviews to find a solution for the problem. 
+                        You can read more about it in the workbook below.
+                        Creators of this project: Isabella Viksten, Yuxuan Zhang, Edvin Hedenström and Sietse van den Nieuwenhuijzen.
+                     </p>
+                    <a href="https://drive.google.com/file/d/1Oo1v9fsBsWtJ68JrzZj1_efrptZsvm6Z/view?usp=sharing" target="_blank" id="open-link" class="fa-solid fa-arrow-up-right-from-square"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work_tARget.png">
+                <div class="layer">
+                    <h3>AR Application</h3>
+                    <p>For the course Multimodal interaction and interfaces we created an AR app that lets the user launch a rocket at 
+                        a virtual target that can be seen through the phone's camera. The code was written in C# and using Unity to develop 
+                        the game. I focused on haptics and audio, as well as overall coding on the project together with my group members. 
+                        Creators of this project: Isabella Viksten, Jackie Hellsten, Patrik Lundqvist and Casper Hildebrand. 
+                    </p>
+                    <a href="https://github.com/isabellaviksten1/tARget1" target="_blank" id="open-link" class="fa-solid fa-arrow-up-right-from-square"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work_touristify_2.png">
+                <div class="layer">
+                    <h3>Web Application</h3>
+                    <p>We created an interactive website for the course Interaction Programming and the Dynamic Web. This websiteis supposed to be used 
+                        as a tool when exploring a city that you are in. You can filter what type of locations that you want to see, and when clicking 
+                        on the map you will see a list with recommended places. In this project I focused on overall design and functionality of sidebar menus.
+                        Creators of this project: Isabella Viksten, Tom Nyström, Axel Svahn and Adrian Valdani. 
+                    </p>
+                    <a href="https://github.com/isabellaviksten1/toursitify" target="_blank" id="open-link" class="fa-solid fa-arrow-up-right-from-square"></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/isabellaviksten1" target="_blank" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- -------contact-------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>isabellaviksten@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/isabella-viksten/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/isabellaviksten/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/isabella.viksten/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kevin. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+    </div>
+</div>
+
+<script>
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+
+    const opentab = tabname => {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    const sidemenu = document.getElementById("sidemenu")
+    const openmenu = () =>{
+        sidemenu.style.right = "0";
+    }
+    const closemenu = () =>{
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby6rIHA-RVUnlAMga_WafciR8noT4oUEbkYOcl1DMyo0D-xk_6Xcpwt5_LGldxX_2gH/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Message sent successfully!"
+        setTimeout(function(){
+            msg.innerHTML =""
+        }, 5000)
+        form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
