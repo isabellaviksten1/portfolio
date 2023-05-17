@@ -41,7 +41,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: white;
+    color: #8a817c;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -385,6 +385,7 @@ nav .fa-solid{
     }
 
     nav ul .fa-solid{
+        color: #8a817c;
         position: absolute;
         top: 25px;
         left: 25px;
